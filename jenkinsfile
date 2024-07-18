@@ -1,0 +1,53 @@
+pipeline 
+{
+    agent any
+
+    stages 
+	{
+        stage('Build') 
+		{
+            steps 
+			{
+                echo 'Starting the build...'
+                // Your build steps here
+                echo 'Build complete!'
+            }
+        }
+		
+        stage('Test') 
+		{
+            steps 
+			{
+                echo 'Running tests...'
+                // Your test steps here
+                echo 'Tests complete!'
+            }
+        }
+		
+        stage('Deploy') 
+		{
+            steps 
+			{
+                echo 'Deploying...'
+                // Your deployment steps here
+                echo 'Deployment complete!'
+            }
+        }
+    }
+
+    //post 
+	//{
+    //    success 
+	//	{
+    //        echo 'Pipeline executed successfully!'
+    //    }
+    //    failure 
+	//	{
+    //        echo 'Pipeline execution failed!'
+    //    }
+    //    always 
+	//	{
+    //        echo 'Pipeline completed.'
+    //    }
+    //}
+}
