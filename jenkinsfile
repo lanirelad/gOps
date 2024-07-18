@@ -35,19 +35,19 @@ pipeline
         }
     }
 
-    //post 
-	//{
-    //    success 
-	//	{
-    //        echo 'Pipeline executed successfully!'
-    //    }
-    //    failure 
-	//	{
-    //        echo 'Pipeline execution failed!'
-    //    }
-    //    always 
-	//	{
-    //        echo 'Pipeline completed.'
-    //    }
-    //}
+    post 
+	{
+        success 
+		{
+            echo 'Pipeline executed successfully!'
+        }
+        failure 
+	{
+           echo 'Pipeline execution failed!'
+        }
+        always 
+	{
+            echo 'Pipeline completed.'
+        }
+    }
 }
