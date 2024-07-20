@@ -37,7 +37,7 @@ pipeline
         {
             when
 			{
-				expression { "${params.DRY_RUN}" == "false" }
+				environment name:"${params.DRY_RUN}" ,value: "false" 
 			}
 			steps 
             {
