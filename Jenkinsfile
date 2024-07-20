@@ -26,7 +26,7 @@ pipeline
         {
             when
 			{
-				environment name: "${params.DRY_RUN}", value:'false'
+				expression { return !params.DRY_RUN }
 			}
 			steps 
             {
