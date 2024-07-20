@@ -22,6 +22,17 @@ pipeline
             }
         }
 
+        stage('Debug') 
+        {
+            steps 
+            {
+                script 
+                {
+                    echo "DRY_RUN parameter value: ${params.DRY_RUN}"
+                }
+            }
+        }
+
         stage('Run') 
         {
             when
