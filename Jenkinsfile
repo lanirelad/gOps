@@ -1,7 +1,15 @@
 pipeline 
 {
     agent any
-
+	
+	parameters
+	{
+		 DRY_RUN(
+            name: 'DRY_RUN',
+            defaultValue: false,
+            description: 'Whether to run stage Run or not'
+	}
+	
     stages 
     {
         stage('Fetch From Github') 
@@ -15,7 +23,11 @@ pipeline
         
         stage('Run') 
         {
-            steps 
+            when
+			{
+				environment name: 'DRY_RUN', value: 'false'
+			}
+			steps 
             {
                sh 'python3 main.py >> output.txt'
             }
