@@ -6,7 +6,7 @@ pipeline
 	{
 		 booleanParam(
             name: 'DRY_RUN',
-            defaultValue: false,
+            defaultValue: true,
             description: 'Whether to run stage Run or not'
          )
 	}
