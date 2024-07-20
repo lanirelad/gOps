@@ -8,6 +8,7 @@ pipeline
             name: 'DRY_RUN',
             defaultValue: false,
             description: 'Whether to run stage Run or not'
+         )
 	}
 	
     stages 
