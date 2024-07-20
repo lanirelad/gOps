@@ -4,7 +4,7 @@ pipeline
 	
 	parameters
 	{
-		 DRY_RUN(
+		 boolOper(
             name: 'DRY_RUN',
             defaultValue: false,
             description: 'Whether to run stage Run or not'
