@@ -37,7 +37,7 @@ pipeline
         {
             when
 			{
-				expression { return !params.DRY_RUN }
+				expression { "${params.DRY_RUN}" == "false" }
 			}
 			steps 
             {
