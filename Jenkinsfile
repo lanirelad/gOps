@@ -6,7 +6,7 @@ pipeline
 	{
 		 booleanParam(
             name: 'DRY_RUN',
-            defaultValue: false,
+            defaultValue: true,
             description: 'Whether to run stage Run or not'
          )
 	}
@@ -19,17 +19,6 @@ pipeline
             {
                 echo 'Fethcing code from github'
                 git branch: 'main', url: 'https://github.com/lanirelad/jenkins01HW.git'
-            }
-        }
-        
-        stage('Set DRY_RUN')  //change dry_run for test
-        {
-            steps
-            {
-                script
-                {
-                    env.DRY_RUN = 'true' 
-                }
             }
         }
 
