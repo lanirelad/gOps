@@ -22,11 +22,22 @@ pipeline
             }
         }
         
+        stage('Set DRY_RUN')  //change dry_run for test
+        {
+            steps
+            {
+                script
+                {
+                    env.DRY_RUN = 'true' 
+                }
+            }
+        }
+
         stage('Run') 
         {
             when
 			{
-				environment name: 'DRY_RUN', value: 'false'
+				expression { return !params.DRY_RUN }
 			}
 			steps 
             {
